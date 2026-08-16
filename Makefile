@@ -690,6 +690,8 @@ KBUILD_CFLAGS += $(call cc-disable-warning, misleading-indentation)
 KBUILD_CFLAGS += $(call cc-disable-warning, designated-init)
 KBUILD_CFLAGS += $(call cc-disable-warning, maybe-uninitialized)
 KBUILD_CFLAGS += $(call cc-disable-warning, restrict)
+KBUILD_CFLAGS += $(call cc-option,-Wno-dangling-pointer)
+
 
 ifdef CONFIG_LD_DEAD_CODE_DATA_ELIMINATION
 KBUILD_CFLAGS	+= $(call cc-option,-ffunction-sections,)
