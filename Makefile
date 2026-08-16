@@ -692,6 +692,8 @@ KBUILD_CFLAGS += $(call cc-disable-warning, maybe-uninitialized)
 KBUILD_CFLAGS += $(call cc-disable-warning, restrict)
 KBUILD_CFLAGS += $(call cc-option,-Wno-dangling-pointer)
 KBUILD_CFLAGS += $(call cc-option,-Wno-address)
+KBUILD_CFLAGS += $(call cc-option,-Wno-enum-int-mismatch)
+KBUILD_CFLAGS += $(call cc-option,-Wno-stringop-overread)
 
 
 ifdef CONFIG_LD_DEAD_CODE_DATA_ELIMINATION
