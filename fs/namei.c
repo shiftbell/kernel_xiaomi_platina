@@ -1685,6 +1685,7 @@ static struct dentry *__lookup_hash(struct qstr *name,
 	dentry = lookup_dcache(name, base, flags, &need_lookup);
 	if (!need_lookup)
 		return dentry;
+	}
 
 	return lookup_real(base->d_inode, dentry, flags);
 }
